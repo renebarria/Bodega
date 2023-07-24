@@ -1,0 +1,54 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div>
+    {% if user.is_authenticated %}
+        <p>Hola, {{ user.username }} | <a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a></p>
+    {% endif %}
+</div>
+
+
+<h1>Proyecto de Bodega</h1>
+
+<div class="image-container">
+    <img src="{% static 'Imagen1.png' %}" alt="" class="centered-image" width="300px">
+</div>
+
+
+<br></br>
+
+<div class="container">
+    <h1>Visión del Proyecto de Bodegas</h1>
+    <p>
+        Nuestro proyecto de bodegas tiene como visión convertirse en la solución líder para la gestión eficiente y efectiva de inventarios y productos. Nuestro objetivo es ofrecer a las empresas una plataforma integral que les permita optimizar sus procesos de almacenamiento y distribución, maximizando la productividad y reduciendo costos operativos.
+    </p>
+    <h2>Innovación Tecnológica</h2>
+    <p>
+        Buscamos ser pioneros en la aplicación de las últimas tecnologías en el ámbito de la gestión de bodegas. Nuestra visión es desarrollar un sistema avanzado que integre inteligencia artificial, análisis de datos y automatización para ofrecer a nuestros clientes una herramienta poderosa y fácil de usar.
+    </p>
+    <h2>Excelencia en el Servicio</h2>
+    <p>
+        Queremos ser reconocidos por la excelencia en el servicio al cliente. Nuestra visión es brindar un soporte y atención personalizada que supere las expectativas de nuestros usuarios. Nos esforzamos por entender las necesidades de cada cliente y adaptar nuestro sistema para satisfacer sus requerimientos específicos.
+    </p>
+    <h2>Colaboración y Crecimiento</h2>
+    <p>
+        En nuestro proyecto, valoramos la colaboración y el trabajo en equipo. Nuestra visión es crear una comunidad de usuarios y clientes satisfechos que compartan sus experiencias y contribuyan al crecimiento y mejora continua de nuestra plataforma. Queremos ser un aliado estratégico para el éxito de nuestros clientes en el largo plazo.
+    </p>
+    <h2>Sostenibilidad y Responsabilidad</h2>
+    <p>
+        Nos preocupamos por el impacto ambiental y social de nuestras operaciones. Nuestra visión es promover prácticas sostenibles en el manejo de inventarios y la cadena de suministro. Aspiramos a ser una empresa responsable, comprometida con el bienestar de la comunidad y el cuidado del medio ambiente.
+    </p>
+    <p>
+        Con esta visión clara y enfocada, trabajamos arduamente para llevar a cabo nuestro proyecto de bodegas y ofrecer una solución integral que ayude a las empresas a alcanzar sus objetivos y prosperar en un entorno competitivo y dinámico.
+    </p>
+</div>
+
+
+<br></br>
+<br></br>
+
+{% endblock %}

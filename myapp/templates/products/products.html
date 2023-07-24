@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <h1>Listado de productos</h1>
+
+    <form method="get" action="{% url 'products' %}">
+        <input type="text" name="q" placeholder="Filtrar..." value="{{ request.GET.q }}">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <ul>
+        {% for product in products %}
+        <li>
+            <a href="{% url 'product_detail' product.id %}" style="color: black; text-decoration: none;">{{ product.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

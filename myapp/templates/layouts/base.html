@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Bodega</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+  </head>
+  <body>
+    <nav class="navbar container">
+      <ul>
+        <li>
+          <a href="{% url 'index' %}">Inicio</a>
+        </li>
+
+        <li>
+          <a href="{% url 'products' %}">Listado de productos</a>
+        </li>
+
+        <li>
+          <a href="{% url 'create_product' %}">Crear Producto</a>
+        </li>
+
+        <li>
+          <a href="{% url 'about' %}">Sobre nosotros</a>
+        </li>
+
+        <li>
+          <a href="{% url 'terms' %}">Términos y Condiciones</a>
+      </li>
+
+      </ul>
+    </nav>
+
+    <footer class="footer">
+      <p>
+        Copyright © 2023 -----, S.A. Todos los derechos reservados
+        <a href="{% url 'about' %}">Sobre nosotros</a>
+        <a href="{% url 'terms' %}">Terminos y Condiciones</a>
+      </p>
+    </footer>
+
+    <main class="container">{% block content %} {% endblock %}</main>
+    
+  </body>
+</html>
