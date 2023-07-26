@@ -5,6 +5,7 @@ from .forms import CreateNewTask, CreateNewProject, ProductForm, CreateNewProduc
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
 
 @login_required
 def index(request):
@@ -176,3 +177,14 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('login')
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')  # Redirige al login después de un registro exitoso
+    else:
+        form = UserCreationForm()
+    return render(request, 'register.html', {'form': form})

@@ -10,10 +10,20 @@
         {{ form.as_p }}
         <input type="submit" value="Login">
     </form>
-    <br></br>
+    <br>
+    <a href="{% url 'register' %}">Registrarse</a>
+    <br><br>
+
     <a>Username: admin</a><br>
-    <a>Password: admin</a><br>
-    <a>python manage.py createsuperuser</a>
+    <a>Password: admin</a><br><br>
+    <a>Creé un usuario llamado "admin" con la contraseña "admin" por defecto. En caso de no poder
+        entrar con este usuario debido a que al descargar el repositorio e instalar el virtualenv, etc., 
+        podría crear una base de datos por defecto que no incluya este usuario.
+        </a>
+    <a>En este caso, habría que crear uno nuevo mediante "registrarse". Este pide un usuario común y corriente.
+        La contraseña no debe ser similar al nombre de usuario, debe contener mínimo 8 caracteres,
+        no pueden ser solo números y no puede ser algo como "contraseña" o parecidos.
+    </a>
    
 {% endblock %}
 
