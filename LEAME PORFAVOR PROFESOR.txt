@@ -1,0 +1,4 @@
+Por alguna razón al subir el repositorio a github lo hace sin la carpeta venv, por lo que hay que copiarla externamente o re-instalar el ambiente virtual como lo hacen en el comienzo del video
+Lo otro es que todavía sigo editando el proyecto y agregando funcionalidades, hay algunas partes en ingles y otras en español, me preocupé mas que nada que sea funcional y entender lo que se está haciendo, así que podría aparecer un commit random de repente
+Planeo agregar bodegas y que los productos se destinen a las diferentes bodegas (en realidad ya lo había hecho pero al solucionar un error saltaba otro y como la presentacion es pronto no lo agregué por ahora)
+También me falta css y eliminar partes de codigo que no sirven, estoy en eso
